@@ -24,17 +24,6 @@ Amazon EC2
 CloudWatch Logs
 ```
 
----
-
-# AWS Services Used
-
-- Amazon EC2
-- AWS Lambda
-- Amazon EventBridge
-- AWS IAM
-- Amazon CloudWatch Logs
-- Boto3 (AWS SDK for Python)
-
 # Implementation Steps
 
 ## Step 1 – Create the IAM Role

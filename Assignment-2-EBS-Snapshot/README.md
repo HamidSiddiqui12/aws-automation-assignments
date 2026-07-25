@@ -24,20 +24,6 @@ Delete Old Snapshots
 CloudWatch Logs
 ```
 
----
-
-# AWS Services Used
-
-- Amazon EC2
-- Amazon EBS
-- AWS Lambda
-- AWS IAM
-- Amazon EventBridge
-- Amazon CloudWatch Logs
-- Boto3 (AWS SDK for Python)
-
----
-
 # Implementation Steps
 
 ## Step 1: Create an EC2 Instance
