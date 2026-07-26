@@ -47,6 +47,11 @@ Assignment-1-S3-Cleanup
 
 ---
 
+#Budget Creation
+
+![S3 Bucket](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20101651.png)
+
+
 # Implementation Steps
 
 ## Step 1 - Create an Amazon S3 Bucket
@@ -55,7 +60,7 @@ Created an Amazon S3 bucket named **hamid-s3-cleanup** and uploaded sample files
 
 For testing purposes, the object age threshold was temporarily reduced so that deletion could be verified without waiting 30 days.
 
-![S3 Bucket](screenshots/01-s3-bucket.png)
+![S3 Bucket](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20102851.png)
 
 ---
 
@@ -74,9 +79,9 @@ Created an inline least-privilege policy with permissions:
 
 The permissions were scoped only to the target S3 bucket.
 
-![IAM Role](screenshots/02-iam-role.png)
+![IAM Role](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20103824.png)
 
-![Inline IAM Policy](screenshots/03-inline-policy.png)
+![Inline IAM Policy](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-26%20172708.png)
 
 ---
 
@@ -90,7 +95,8 @@ Created an AWS Lambda function using:
 
 The Lambda function scans the bucket and removes stale objects.
 
-![Lambda Configuration](screenshots/04-lambda-configuration.png)
+![Lambda Configuration](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20105318.png)
+![Lambda Configuration](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20120414.png)
 
 ---
 
@@ -117,7 +123,7 @@ Verified that:
 - Newer objects remained in the bucket.
 - Deleted object names were logged successfully.
 
-![Lambda Test Output](screenshots/05-lambda-test.png)
+![Lambda Test Output](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20120339.png)
 
 ---
 
@@ -130,7 +136,8 @@ Verified that CloudWatch Logs displayed:
 - Objects deleted
 - Completion status
 
-![CloudWatch Logs](screenshots/06-cloudwatch-logs.png)
+![CloudWatch Logs](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20120946.png)
+![CloudWatch Logs](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20121513.png)
 
 ---
 
@@ -138,18 +145,7 @@ Verified that CloudWatch Logs displayed:
 
 Confirmed that only the newer objects remained in the bucket after the cleanup process.
 
-![Final Bucket](screenshots/07-final-bucket.png)
+![Final Bucket](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20120359.png)
+![Final Bucket](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-1-S3-Cleanup/Snapshots/Screenshot%202026-07-21%20121554.png)
 
 ---
-
-# Sample Output
-
-```text
-Scanning bucket: hamid-s3-cleanup
-
-Deleted:
-old-file-1.txt
-old-file-2.jpg
-
-Cleanup completed successfully.
-```
