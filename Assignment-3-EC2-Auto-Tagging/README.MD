@@ -32,7 +32,7 @@ Created an IAM role for AWS Lambda using **Lambda** as the trusted entity.
 
 ### Screenshot
 
-![IAM Role](screenshots/01-iam-role.png)
+![IAM Role](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20090107.png)
 
 ---
 
@@ -49,7 +49,11 @@ Also attached the AWS managed policy:
 
 ### Screenshot
 
-![Inline Policy](screenshots/02-inline-policy.png)
+![Inline Policy](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20090139.png)
+
+![Inline Policy](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20090209.png)
+
+![Inline Policy](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20090321.png)
 
 ---
 
@@ -59,37 +63,16 @@ Created a Lambda function named **EC2-Auto-Tagging** using the Python 3.12 runti
 
 ### Screenshot
 
-![Lambda Configuration](screenshots/03-lambda-configuration.png)
+![Lambda Configuration](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20090744.png)
 
----
+![Lambda Configuration](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20091651.png)
 
-## Step 4 – Upload the Python Code
 
-Implemented the Lambda function using the Boto3 SDK to:
-
-- Read the EC2 instance ID from the EventBridge event.
-- Generate the current date.
-- Add the `LaunchDate` tag.
-- Add the `Environment=Development` tag.
-- Print a success message to CloudWatch Logs.
-
-### Screenshot
-
-![Lambda Code](screenshots/04-lambda-code.png)
-
----
-
-## Step 5 – Configure the EventBridge Rule
+## Step 4 – Configure the EventBridge Rule
 
 Created an EventBridge rule to listen for EC2 instance state-change events.
 
-### Screenshot
-
-![EventBridge Rule](screenshots/05-eventbridge-rule.png)
-
----
-
-## Step 6 – Configure the Event Pattern
+## Step 5 – Configure the Event Pattern
 
 Configured the event pattern with the following settings:
 
@@ -100,21 +83,21 @@ Configured the event pattern with the following settings:
 
 ### Screenshot
 
-![Event Pattern](screenshots/06-event-pattern.png)
+![EventBridge Rule](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20091659.png)
 
 ---
 
-## Step 7 – Launch a Test EC2 Instance
+## Step 6 – Launch a Test EC2 Instance
 
 Launched a t3.micro EC2 instance named **AutoTag-Test** to verify the automation.
 
 ### Screenshot
 
-![EC2 Instance](screenshots/07-ec2-launch.png)
+![EC2 Instance](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20092002.png)
 
 ---
 
-## Step 8 – Verify Automatic Tagging
+## Step 7 – Verify Automatic Tagging
 
 After the EC2 instance entered the **Running** state, EventBridge automatically triggered the Lambda function, which added the following tags:
 
@@ -123,24 +106,25 @@ After the EC2 instance entered the **Running** state, EventBridge automatically 
 
 ### Screenshot
 
-![Tags Added](screenshots/08-tags-added.png)
+![Tags Added](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20092014.png)
 
 ---
 
-## Step 9 – Verify CloudWatch Logs
+## Step 8 – Verify CloudWatch Logs
 
 Verified successful Lambda execution in Amazon CloudWatch Logs. The logs confirm that the instance was tagged successfully.
 
 ### Screenshot
 
-![CloudWatch Logs](screenshots/09-cloudwatch-logs.png)
+![CloudWatch Logs](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20092526.png)
 
 ---
 
-## Step 10 – Final Result
+## Step 9 – Final Result
 
 Confirmed that the EC2 instance was automatically tagged without manual intervention.
 
 ### Screenshot
 
-![Final Result](screenshots/10-final-result.png)
+![Final Result](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20093205.png)
+![Final Result](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-3-EC2-Auto-Tagging/Snapshots/Screenshot%202026-07-23%20093216.png)
