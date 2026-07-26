@@ -32,7 +32,7 @@ A t3.micro Amazon EC2 instance was launched in the **us-east-1** region. AWS aut
 
 ### Screenshot
 
-![EC2 Instance](screenshots/01-ec2-instance.png)
+![EC2 Instance](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20083948.png)
 
 ---
 
@@ -42,7 +42,7 @@ The attached root EBS volume was verified from the EC2 console. The Volume ID wa
 
 ### Screenshot
 
-![EBS Volume](screenshots/02-ebs-volume.png)
+![EBS Volume](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20083939.png)
 
 ---
 
@@ -52,7 +52,7 @@ An IAM role for AWS Lambda was created with **Lambda** as the trusted entity.
 
 ### Screenshot
 
-![IAM Role](screenshots/03-iam-role.png)
+![IAM Role](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20081334.png)
 
 ---
 
@@ -67,7 +67,8 @@ A least-privilege inline IAM policy was attached to the Lambda execution role wi
 
 ### Screenshot
 
-![IAM Policy](screenshots/04-inline-policy.png)
+![IAM Policy](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20083857.png)
+![IAM Policy](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20084851.png)
 
 ---
 
@@ -78,61 +79,61 @@ The IAM role created in the previous step was assigned as the execution role.
 
 ### Screenshot
 
-![Lambda Configuration](screenshots/05-lambda-configuration.png)
+![Lambda Configuration](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20082507.png)
 
 ---
-
-## Step 6: Upload the Python Code
-
-The Lambda function was implemented using the Boto3 SDK. The code performs the following tasks:
 
 ### Screenshot
 
-![Lambda Code](screenshots/06-lambda-code.png)
+![Lambda Code](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20083051.png)
 
 ---
 
-## Step 7: Test the Lambda Function
+## Step 6: Test the Lambda Function
 
 The Lambda function was manually invoked using the Test feature to verify successful execution.
 
 ### Screenshot
 
-![Lambda Test](screenshots/07-test-event.png)
+![Lambda Test](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20082730.png)
 
 ---
 
-## Step 8: Verify Successful Execution
+## Step 7: Verify Successful Execution
 
 The Lambda function completed successfully and returned a successful execution status.
 
 ### Screenshot
 
+![Lambda Success](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20083051.png)
+![Lambda Success](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20085133.png)
 ![Lambda Success](screenshots/08-test-success.png)
 
 ---
 
-## Step 9: Verify CloudWatch Logs
+## Step 8: Verify CloudWatch Logs
 
 Amazon CloudWatch Logs automatically recorded the Lambda execution. The logs display the created snapshot ID and any deleted snapshot IDs.
 
 ### Screenshot
 
-![CloudWatch Logs](screenshots/09-cloudwatch-logs.png)
+![CloudWatch Logs](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20085247.png)
 
 ---
 
-## Step 10: Verify Snapshot Creation
+## Step 9: Verify Snapshot Creation
 
 The EC2 Snapshots page was used to verify that the snapshot was created successfully and tagged with **CreatedBy=Lambda-Backup**.
 
 ### Screenshot
 
-![Snapshot](screenshots/10-ebs-snapshot.png)
+![Snapshot](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20083150.png)
+![Snapshot](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20082519.png)
+
 
 ---
 
-## Step 11: Configure Amazon EventBridge
+## Step 10: Configure Amazon EventBridge
 
 An Amazon EventBridge rule was created to trigger the Lambda function automatically every week.
 
@@ -144,6 +145,6 @@ rate(7 days)
 
 ### Screenshot
 
-![EventBridge Rule](screenshots/11-eventbridge-rule.png)
+![EventBridge Rule](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-2-EBS-Snapshot/Snapshots/Screenshot%202026-07-22%20083558.png)
 
 ---
