@@ -58,21 +58,12 @@ Created an Amazon SNS Standard Topic named **BucketAuditAlerts**.
 
 The SNS topic is responsible for sending email notifications whenever the Lambda function detects a public S3 bucket.
 
-![SNS Topic](screenshots/01-sns-topic.png)
+![SNS Topic](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20224832.png)
+![SNS Topic](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20225247.png)
 
 ---
 
-## Step 2 - Subscribe an Email Address
-
-Subscribed an email address to the SNS topic and confirmed the subscription through the confirmation email sent by AWS.
-
-Without confirming the subscription, SNS cannot send notifications.
-
-![Email Subscription](screenshots/02-email-subscription.png)
-
----
-
-## Step 3 - Create the IAM Role
+## Step 2 - Create the IAM Role
 
 Created an IAM Role for AWS Lambda.
 
@@ -88,13 +79,13 @@ Created an inline least-privilege policy allowing:
 - s3:GetBucketAcl
 - sns:Publish
 
-![IAM Role](screenshots/03-iam-role.png)
+![IAM Role](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20225550.png)
 
-![Inline IAM Policy](screenshots/04-inline-policy.png)
+![Inline IAM Policy](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20232042.png)
 
 ---
 
-## Step 4 - Create the Lambda Function
+## Step 3 - Create the Lambda Function
 
 Created a Lambda function using:
 
@@ -104,11 +95,11 @@ Created a Lambda function using:
 
 The Lambda function audits every S3 bucket in the account.
 
-![Lambda Configuration](screenshots/05-lambda-configuration.png)
+![Lambda Configuration](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-26%20180524.png)
 
 ---
 
-## Step 5 - Deploy the Python Code
+## Step 4 - Deploy the Python Code
 
 The Lambda function performs the following actions:
 
@@ -122,7 +113,7 @@ The Lambda function performs the following actions:
 
 ---
 
-## Step 6 - Test the Lambda Function
+## Step 5 - Test the Lambda Function
 
 Initially, all buckets were private.
 
@@ -141,15 +132,23 @@ After running the Lambda again:
 - The public bucket was detected.
 - An SNS email notification was successfully delivered.
 
-![Lambda Test Output](screenshots/06-lambda-test.png)
+![Lambda Test Output](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20230604.png)
 
-![Public Bucket Policy](screenshots/08-public-bucket-policy.png)
+![Public Bucket Policy](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20231244.png)
 
-![SNS Email Alert](screenshots/09-sns-email.png)
+![SNS Email Alert](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20232310.png)
+
+==========
+
+##Invoke Status after deploying code
+
+![Test Code](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20231436.png)
+
+![Test Code](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20231900.png)
 
 ---
 
-## Step 7 - Verify CloudWatch Logs
+## Step 6 - Verify CloudWatch Logs
 
 Verified that CloudWatch Logs recorded:
 
@@ -157,4 +156,11 @@ Verified that CloudWatch Logs recorded:
 - Public bucket detection.
 - SNS notification sent successfully.
 
-![CloudWatch Logs](screenshots/07-cloudwatch-logs.png)
+![CloudWatch Logs](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20232146.png)
+====
+![CloudWatch Logs](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20232208.png)
+====
+![CloudWatch Logs](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-
+25%20232226.png)
+====
+![CloudWatch Logs](https://github.com/HamidSiddiqui12/aws-automation-assignments/blob/main/Assignment-4-S3-Public-Access-Audit/Snapshots/Screenshot%202026-07-25%20232235.png)
